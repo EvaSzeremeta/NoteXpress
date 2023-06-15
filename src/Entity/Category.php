@@ -21,6 +21,10 @@ class Category
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Note::class, orphanRemoval: true)]
     private Collection $notes;
 
+    #[ORM\ManyToOne(inversedBy: 'categories')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
     public function __construct()
     {
         $this->notes = new ArrayCollection();
@@ -69,6 +73,18 @@ class Category
                 $note->setCategory(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }
