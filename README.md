@@ -30,10 +30,10 @@ composer install
 
 ## Déroulé de la formation
 
-1. Créer un projet Symfony
-2. Créer une base de données (BDD)
-3. Créer des entités
-4. Migrer les entités en BDD
+✅ 1. Créer un projet Symfony
+✅ 2. Créer une base de données (BDD)
+✅ 3. Créer des entités
+✅ 4. Migrer les entités en BDD
 5. Ajouter des relations entre les entités
 6. Créer des fixtures (données de test)
 7. Installer un certificat SSL
